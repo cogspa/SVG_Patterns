@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Polka Dot Pattern Example</title>
+</head>
+<body>
+    <svg width="1920" height="1080">
+        <defs>
+          <pattern id="dots" patternUnits="userSpaceOnUse" width="10" height="10">
+            <circle cx="5" cy="5" r="3" stroke="#ff69b4" stroke-width="2" fill="none"/>
+          </pattern>
+          <pattern id="stripes" patternUnits="userSpaceOnUse" width="10" height="10">
+            <rect width="10" height="10" fill="#ffffff"/>
+            <line x1="0" y1="0" x2="0" y2="10" stroke="#00ff00" stroke-width="2"/>
+          </pattern>
+        </defs>
+        <rect x="0" y="0" width="1920" height="1080" fill="#ffffff"/>
+        <rect x="100" y="200" width="300" height="500" fill="url(#dots)" style="position:absolute; top: 200px; left: 100px; mix-blend-mode: screen;"/>
+        <rect x="500" y="100" width="600" height="400" fill="url(#stripes)" style="position:absolute; top: 100px; left: 500px; mix-blend-mode: multiply;"/>
+        <rect x="800" y="700" width="200" height="800" fill="url(#dots)" style="position:absolute; top: 700px; left: 800px; mix-blend-mode: overlay;"/>
+        <rect x="1200" y="500" width="900" height="700" fill="url(#stripes)" style="position:absolute; top: 500px; left: 1200px; mix-blend-mode: hard-light;"/>
+        <rect x="400" y="800" width="500" height="200" fill="url(#dots)" style="position:absolute; top: 800px; left: 400px; mix-blend-mode: color-burn;"/>
+        <rect x="1500" y="100" width="600" height="500" fill="url(#stripes)" style="position:absolute; top: 100px; left: 1500px; mix-blend-mode: soft-light;"/>
+        <rect x="1000" y="400" width="300" height="900" fill="url(#dots)" style="position:absolute; top: 400px; left: 1000px; mix-blend-mode: exclusion;"/>
+        <rect x="1400" y="200" width="800" height="300" fill="url(#stripes)" style="position:absolute; top: 200px; left: 1400px; mix-blend-mode: difference;"/>
+        <rect x="500" y="500" width="600" height="400" fill="url(#dots)" style="position:absolute; top: 500px; left: 500px; mix-blend-mode: hue;"/>
+        <rect x="1600" y="600" width="400" height="700" fill="url(#stripes)" style="position:absolute; top: 600px; left: 1600px; mix-blend-mode: luminosity;"/>
+        <image href="https://source.unsplash.com/random/800x800" x="700" y="300" style="position:absolute; top: 300px; left: 800px; mix-blend-mode: lighten;"/>
+        <image href="https://source.unsplash.com/random/500x500" width="500" height="500" x="1300" y="500" style="position:absolute; top: 500px; left: 1300px; mix-blend-mode: darken;"/>
+      </svg>
+      
+      
+      
+</body>
+</html>
