@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Randomly Distributed Divs</title>
+    <style>
+      /* optional styling for the page */
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .colored-div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+      }
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .purple {
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // define an array of colors
+      var colors = ["red", "green", "blue", "yellow", "purple"];
+
+      // create 5 divs with different colors and positions
+      for (var i = 0; i < 5; i++) {
+        // create a new div element
+        var div = document.createElement("div");
+
+        // set the class to "colored-div" and a random color from the array
+        div.className = "colored-div " + colors[Math.floor(Math.random() * colors.length)];
+
+        // generate random top and left values for the div
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+        var randomLeft = Math.floor(Math.random() * (windowWidth - 200));
+        var randomTop = Math.floor(Math.random() * (windowHeight - 200));
+
+        // set the top and left location of the div to the random numbers
+        div.style.left = randomLeft + "px";
+        div.style.top = randomTop + "px";
+
+        // add the div to the document body
+        document.body.appendChild(div);
+      }
+    </script>
+  </body>
+</html>

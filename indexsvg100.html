@@ -1,0 +1,38 @@
+<!-- create a web page the randomly generates patterns with javascript-->
+<!-- path: indexbasics.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pattern Example</title>
+</head>
+<body>
+	<svg width="1920" height="1080">
+		<defs>
+			<!-- Polka Dot pattern -->
+			<pattern id="polka-dots" patternUnits="userSpaceOnUse" width="20" height="20">
+				<circle cx="10" cy="10" r="5" fill="#FFC107"/>
+				<circle cx="5" cy="5" r="2" fill="#4CAF50"/>
+				<circle cx="15" cy="15" r="3" fill="#2196F3"/>
+			</pattern>
+			<!-- Small Polka Dot pattern -->
+			<pattern id="small-dots" patternUnits="userSpaceOnUse" width="10" height="10">
+				<circle cx="5" cy="5" r="2" fill="#9C27B0"/>
+			</pattern>
+			<!-- Horizontal Stripe pattern -->
+			<pattern id="stripes" patternUnits="userSpaceOnUse" width="20" height="20">
+				<rect x="0" y="0" width="20" height="10" fill="#FF5722"/>
+				<rect x="0" y="10" width="20" height="10" fill="#00BCD4"/>
+			</pattern>
+		</defs>
+		<!-- Four Unsplash images with different sizes and locations -->
+		<image href="https://source.unsplash.com/random/800x800" x="0" y="0" width="400" height="400" style="mix-blend-mode: color-dodge;"/>
+		<image href="https://source.unsplash.com/random/700x700" x="500" y="100" width="300" height="300" style="mix-blend-mode: overlay;"/>
+		<image href="https://source.unsplash.com/random/600x600" x="1000" y="200" width="200" height="200" style="mix-blend-mode: hue;"/>
+		<image href="https://source.unsplash.com/random/500x500" x="1500" y="300" width="100" height="100" style="mix-blend-mode: saturation;"/>
+		<!-- Rectangles with different sizes, locations, fill patterns, and blend modes -->
+		<rect x="0" y="500" width="300" height="200" fill="url(#polka-dots)" style="position:absolute; top: 500px; left: 0; mix-blend-mode: difference;"/>
+		<rect x="400" y="600" width="500" height="100" fill="url(#small-dots)" style="position:absolute; top: 600px; left: 400px; mix-blend-mode: color-burn;"/>
+		<rect x="1000" y="400" width="400" height="300" fill="url(#stripes)" style="position:absolute; top: 400px; left: 1000px; mix-blend-mode: lighten;"/>
+		<rect x="1500" y="500" width="200" height="400" fill="url(#polka-dots)" style="position:absolute; top: 500px; left: 1500px; mix-blend-mode: luminosity;"/>
+        	</svg>
+</body>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Randomly Distributed Divs</title>
+    <style>
+      /* optional styling for the page */
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .colored-div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+      }
+      .red {
+        background-color: red;
+        top: 50px;
+        left: 50px;
+      }
+      .green {
+        background-color: green;
+        top: 250px;
+        left: 150px;
+      }
+      .blue {
+        background-color: blue;
+        top: 450px;
+        left: 250px;
+      }
+      .yellow {
+        background-color: yellow;
+        top: 650px;
+        left: 350px;
+      }
+      .purple {
+        background-color: purple;
+        top: 850px;
+        left: 450px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="colored-div red"></div>
+    <div class="colored-div green"></div>
+    <div class="colored-div blue"></div>
+    <div class="colored-div yellow"></div>
+    <div class="colored-div purple"></div>
+  </body>
+  <svg width="1920" height="1080">
+    <script>
+      for (var i = 1; i <= 20; i++) {
+        // draw the vertical lines for each 100px increment from 100 to 1920
+        var x = 100 * i;
+        var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", x);
+        line.setAttribute("y1", 0);
+        line.setAttribute("x2", x);
+        line.setAttribute("y2", 1080);
+        line.setAttribute("stroke", "#ADD8E6");
+        line.setAttribute("stroke-width", "2");
+        document.querySelector("svg").appendChild(line);
+  
+        // draw the horizontal lines for each 100px increment from 100 to 900
+        var y = 100 * i;
+        var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", 0);
+        line.setAttribute("y1", y);
+        line.setAttribute("x2", 1920);
+        line.setAttribute("y2", y);
+        line.setAttribute("stroke", "#ADD8E6");
+        line.setAttribute("stroke-width", "2");
+        document.querySelector("svg").appendChild(line);
+      }
+    </script>
+  </svg>
+</html>
